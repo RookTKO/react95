@@ -1,6 +1,8 @@
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import GameMS from './games/minesweeper/GameMS'
 
+{/*
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { styleReset, List, ListItem, Divider } from 'react95';
 // pick a theme of your choice
 import original from "react95/dist/themes/original";
@@ -26,10 +28,13 @@ const GlobalStyles = createGlobalStyle`
   }
   ${styleReset}
 `;
+*/} 
+
 
 const App = () => (
   <div>
-    <GlobalStyles />
+    <GameMS />
+    {/* <GlobalStyles />
     <ThemeProvider theme={original}>
       <List>
         <ListItem>🎤 Sing</ListItem>
@@ -37,7 +42,7 @@ const App = () => (
         <Divider />
         <ListItem disabled>😴 Sleep</ListItem>
       </List>
-    </ThemeProvider>
+    </ThemeProvider> */}
   </div>
 );
 
