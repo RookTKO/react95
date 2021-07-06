@@ -58,11 +58,31 @@ class BoardMS extends Component{
             {
                 if(!(data[i][j].isMine))
                 {
-                    
+                    let mineAmmount = 0;
+
+                    let neighbouringTiles = getSurroundingTiles(data[i][j].x,data[i][j].y,data);
+
+                    neighbouringTiles.map(tile => 
+                        {
+                            if(tile.isMine)
+                            {
+                                mineAmmount++;
+                            }
+                        });
+                        if(mineAmmount === 0)
+                        {
+                            data[i][j].isEmpty = true;
+                        }
+                        data.neighbouringTiles = ammountOfNeighborMines;
                 }
             }
         }
     }
+
+    getSurroundingTiles(x,y,data){
+
+    }
+
 
     render(){
         return(
